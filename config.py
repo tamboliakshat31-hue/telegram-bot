@@ -15,6 +15,10 @@ UPI_ID = os.getenv("UPI_ID", "paytm.s1mjler@pty")
 AUTO_SELECT_AMOUNT = os.getenv("AUTO_SELECT_AMOUNT", "true").lower() == "true"
 AUTO_VERIFY = os.getenv("AUTO_VERIFY", "true").lower() == "true"
 
+# Payment Timeout Configuration
+PAYMENT_TIMEOUT_MINUTES = int(os.getenv("PAYMENT_TIMEOUT_MINUTES", "20"))
+PAYMENT_TIMEOUT_SECONDS = PAYMENT_TIMEOUT_MINUTES * 60  # 1200 seconds
+
 # Database Configuration (Optional)
 DATABASE_URL = os.getenv("DATABASE_URL", "")
 
@@ -29,3 +33,4 @@ ENABLE_ANALYTICS = True
 ENABLE_PAYMENT_LOGGING = True
 ENABLE_EXCLUSIVE_ACCESS = True
 ENABLE_UPI_PAYMENTS = True
+ENABLE_PAYMENT_TIMEOUT = True
