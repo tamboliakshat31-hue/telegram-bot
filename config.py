@@ -9,6 +9,12 @@ ADMIN_ID = os.getenv("ADMIN_ID", "")
 PAYMENT_LOG_CHANNEL = int(os.getenv("PAYMENT_LOG_CHANNEL", "-1003853425883"))
 EXCLUSIVE_CONTENT_CHANNEL = int(os.getenv("EXCLUSIVE_CONTENT_CHANNEL", "-1003897009577"))
 
+# Payment Gateway Configuration
+MERCHANT_ID = os.getenv("MERCHANT_ID", "HuUfFh33921066625955")
+UPI_ID = os.getenv("UPI_ID", "paytm.s1mjler@pty")
+AUTO_SELECT_AMOUNT = os.getenv("AUTO_SELECT_AMOUNT", "true").lower() == "true"
+AUTO_VERIFY = os.getenv("AUTO_VERIFY", "true").lower() == "true"
+
 # Database Configuration (Optional)
 DATABASE_URL = os.getenv("DATABASE_URL", "")
 
@@ -22,3 +28,4 @@ ENABLE_CHANNEL_PREVIEW = True
 ENABLE_ANALYTICS = True
 ENABLE_PAYMENT_LOGGING = True
 ENABLE_EXCLUSIVE_ACCESS = True
+ENABLE_UPI_PAYMENTS = True
